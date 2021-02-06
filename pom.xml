@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.seungmoo</groupId>
+  <artifactId>magic-moja</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>magic-moja</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--
+    https://mvnrepository.com/artifact/com.google.auto.service/auto-service
+    Annotation Processor 를 mvn install 해서 lib로 만들어야 하는데,,
+    resources에 이는 Processor를 먼저 읽는다.. (MagicMojaProcessor는 아직 컴파일도 안됐는데..)
+    그때는 먼저 Processor를 주석처리하고 mvn clean install 해서 MagicMojaProcessor를 target class로 만들어놓고
+    그 다음에 Processor 주석 해제 후, mvn install을 돌려준다
+    위의 과정이 복잡하기 때문에 아래 Dependency를 적용한다.
+    -->
+    <dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+      <version>1.0-rc7</version>
+    </dependency>
+
+  </dependencies>
+
+</project>
