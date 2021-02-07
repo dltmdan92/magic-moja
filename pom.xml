@@ -40,6 +40,18 @@
       <version>1.0-rc7</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.squareup/javapoet -->
+    <!--
+    유틸리티
+    •	Javapoet: 소스 코드 생성 유틸리티
+    -->
+    <dependency>
+      <groupId>com.squareup</groupId>
+      <artifactId>javapoet</artifactId>
+      <version>1.13.0</version>
+    </dependency>
+
+
   </dependencies>
 
 </project>
